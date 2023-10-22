@@ -99,28 +99,27 @@ if os.path.exists(csv_file):
             price_dict[device] = [cur_price, lowest_price, error_message]
 
 
-def get_response_with_retries(url, headers, params, proxy, proxies, blacklist):
-    proxy_dict = {"http": f"http://{proxy}", "https": f"http://{proxy}"}
-
-    try:
-        response = scraper.get(url, headers=headers, params=params, proxies=proxy_dict, timeout=3)
-        return response
-    except requests.exceptions.RequestException as e:
-        if isinstance(e, requests.exceptions.HTTPError) and e.response.status_code in [400, 401, 403, 404]:
-            print(f"Received status code {e.response.status_code}. Switching proxy...")
+def get_response_with_retries(url, headers, params, proxy, proxies, blacklist, max_retry_count=5):
+    retry_count = 0
+    while retry_count < max_retry_count:
+        proxy_dict = {"http": f"http://{proxy}", "https": f"http://{proxy}"}
+        try:
+            response = scraper.get(url, headers=headers, params=params, proxies=proxy_dict, timeout=3)
+            return response
+        except requests.exceptions.RequestException as e:
+            print(f"Error using proxy {proxy}: {e}")
             blacklist.add(proxy)
-            proxies.remove(proxy)
-
-            # Empty the blacklist if all proxies are blacklisted and add them back to the proxies list
+            if proxy in proxies:
+                proxies.remove(proxy)
             if len(proxies) == 0 and len(blacklist) > 0:
                 print("All proxies are blacklisted. Emptying blacklist and retrying...")
                 proxies.extend(list(blacklist))
                 blacklist.clear()
-
-            return None
-        else:
-            print(f"Error using proxy {proxy}: {e}")
-            return None
+            if proxies:
+                proxy = random.choice(proxies)
+                retry_count += 1
+            else:
+                return None
 
 blacklist = set()
 remaining_devices = device_names.copy()

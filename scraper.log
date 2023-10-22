@@ -1,0 +1,465 @@
+2023-10-18 03:36:36,277 - DEBUG - Starting new HTTPS connection (1): www.kimovil.com:443
+2023-10-18 03:36:37,707 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno9-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:39,504 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-red-magic-8-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-18 03:36:40,933 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-15-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:42,676 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-ace-2_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:44,929 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-magic5_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:46,808 - DEBUG - https://www.kimovil.com:443 "GET /_json/meizu-20_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:48,617 - DEBUG - https://www.kimovil.com:443 "GET /_json/meizu-20-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:50,286 - DEBUG - https://www.kimovil.com:443 "GET /_json/asus-rog-phone-7_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:52,319 - DEBUG - https://www.kimovil.com:443 "GET /_json/asus-rog-phone-7-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:53,841 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s22-plus_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:55,987 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-find-x5-pro-dimensity-edition_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:57,602 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-gt-2_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:36:59,765 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-magic4-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:37:01,733 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-12s_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:37:03,951 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-12s-ultra_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:37:06,213 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno-6-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:37:08,377 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-redmagic-7-pro_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-18 03:37:09,859 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-x80-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:37:11,638 - DEBUG - https://www.kimovil.com:443 "GET /_json/nothing-phone-2_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:37:13,894 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-8-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:37:15,961 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-plus-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:17,754 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:19,045 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-7_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:20,545 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:22,258 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-12t_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:24,137 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:25,434 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-iqoo-neo-7_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:27,210 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:29,246 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-8-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:30,761 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:32,294 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-8_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:33,504 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:35,217 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-thinkphone_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:37,153 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:38,646 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12-pro-plus-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:40,021 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:41,424 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12-turbo_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:42,695 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:43,918 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-gt-neo-5-se_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:45,293 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:46,452 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-iqoo-9_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:47,958 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:49,227 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-magic4_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:50,555 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:52,081 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-k50-extreme-edition_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:53,397 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:54,924 - DEBUG - https://www.kimovil.com:443 "GET /_json/lenovo-legion-y70_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:56,568 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:37:58,259 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-14-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:37:59,318 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:01,035 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-13-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:02,984 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:04,755 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-12-pro-max_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:05,886 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:07,943 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s21-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:09,225 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:11,142 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-find-x3-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:13,078 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:14,968 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno10-proplus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:16,029 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:17,851 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-civi-3_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:19,107 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:20,744 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-90-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:22,630 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:24,309 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-11-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:25,925 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:27,857 - DEBUG - https://www.kimovil.com:443 "GET /_json/asus-zenfone-10_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:28,978 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:30,861 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-fe_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:32,808 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:34,626 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-fe-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:36,201 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:37,991 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:39,877 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:41,859 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-13-limited-edition_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:43,495 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:45,218 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-10r_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:46,683 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:48,322 - DEBUG - https://www.kimovil.com:443 "GET /_json/sony-xperia-5-v_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:50,234 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:52,004 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-15-pro-max_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:53,790 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:55,353 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-13-lite_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:38:56,732 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:38:58,427 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-edge-40_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:00,217 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:01,875 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s22_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:03,667 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:05,484 - DEBUG - https://www.kimovil.com:443 "GET /_json/poco-f4-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:07,252 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:09,048 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-z40s-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:10,973 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:12,742 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-edge-30-fusion_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:13,986 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:15,873 - DEBUG - https://www.kimovil.com:443 "GET /_json/zte-axon-40-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:17,226 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:18,904 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-magic-3-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:20,789 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:22,713 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-11t-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:24,442 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:26,414 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-13-pro-max_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:28,263 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:30,059 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-12x_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:31,920 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:33,613 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-k50-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:35,341 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:37,257 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-magic4-pro-ultimate_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:38,888 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:40,572 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-ace_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:42,547 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:44,240 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-6_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:45,787 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:47,614 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s21-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:49,265 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:51,151 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-11_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:52,605 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:54,628 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-find-x3-neo_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:39:56,351 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:39:58,572 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-9_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:00,475 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:03,152 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-11-ultra_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:04,758 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:07,166 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-90-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:08,859 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:11,114 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno10-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:12,943 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:14,759 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-z-fold5_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:15,820 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:17,311 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-find-x2-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:18,362 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:20,176 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-note20-ultra_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:21,650 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:23,581 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-10_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:25,277 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:27,195 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:28,313 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:30,390 - DEBUG - https://www.kimovil.com:443 "GET /_json/huawei-mate-50-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:31,889 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:33,446 - DEBUG - https://www.kimovil.com:443 "GET /_json/doogee-v30_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:34,495 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:36,314 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-80-gt_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:37,414 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:39,229 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-ace-2v_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:40,791 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:42,376 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-13-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:44,340 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:45,914 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12-pro-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:47,905 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:49,356 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-7a_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:51,256 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:53,145 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s21-fe-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:54,931 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:40:57,120 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-k50-gaming-edition_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:40:58,739 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:00,881 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-redmagic-7_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:02,171 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:04,567 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-z40-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:05,619 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:07,873 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-red-magic-7-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:09,590 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:11,895 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno8-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:13,244 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:15,774 - DEBUG - https://www.kimovil.com:443 "GET /_json/asus-zenfone-9_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:16,987 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:19,207 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-nord-2_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:20,955 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:23,457 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-11t_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:24,618 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:26,872 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-gt-neo-3t_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:28,300 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:30,612 - DEBUG - https://www.kimovil.com:443 "GET /_json/zte-axon-40-ultra_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:32,224 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:34,472 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-edge-x30_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:36,051 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:38,327 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-8t_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:39,388 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:41,464 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-11i_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:42,651 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:44,762 - DEBUG - https://www.kimovil.com:443 "GET /_json/zte-axon-30-ultra_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:45,841 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:48,015 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-s17-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:49,361 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:51,557 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno10_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:53,532 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:55,605 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-nord-ce3-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:41:57,142 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:41:59,381 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-10t-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:42:00,621 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:42:02,828 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-8_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:42:04,158 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:42:06,474 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:42:07,893 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:42:10,027 - DEBUG - https://www.kimovil.com:443 "GET /_json/infinix-zero-ultra_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:42:11,735 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:42:13,745 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-80-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:44:39,202 - DEBUG - Starting new HTTPS connection (1): www.kimovil.com:443
+2023-10-18 03:44:39,631 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-red-magic-8-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-18 03:44:41,176 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-redmagic-7-pro_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-18 03:44:43,081 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-plus-5g_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:44:45,120 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-7_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:44:47,311 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-12t_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:44:49,143 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-iqoo-neo-7_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:44:50,651 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-8-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:44:52,710 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-8_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:44:55,095 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-thinkphone_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:44:56,798 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12-pro-plus-5g_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-18 03:44:58,719 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12-turbo_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:00,247 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-gt-neo-5-se_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:01,572 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-iqoo-9_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:03,713 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-magic4_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:05,858 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-k50-extreme-edition_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-18 03:45:07,707 - DEBUG - https://www.kimovil.com:443 "GET /_json/lenovo-legion-y70_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:09,127 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-14-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:11,286 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-13-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:12,934 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-12-pro-max_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:15,145 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s21-plus_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-18 03:45:16,640 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-find-x3-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:18,337 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:18,447 - DEBUG - Starting new HTTPS connection (2): www.kimovil.com:443
+2023-10-18 03:45:19,894 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-civi-3_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:20,970 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:21,243 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-90-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:23,100 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:26,104 - DEBUG - Starting new HTTPS connection (3): www.kimovil.com:443
+2023-10-18 03:45:26,185 - DEBUG - Starting new HTTPS connection (4): www.kimovil.com:443
+2023-10-18 03:45:28,483 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-fe_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:30,387 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:30,472 - DEBUG - Starting new HTTPS connection (5): www.kimovil.com:443
+2023-10-18 03:45:30,718 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:32,557 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:32,791 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-13-limited-edition_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:34,591 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:34,674 - DEBUG - Starting new HTTPS connection (6): www.kimovil.com:443
+2023-10-18 03:45:37,718 - DEBUG - Starting new HTTPS connection (7): www.kimovil.com:443
+2023-10-18 03:45:37,947 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-15-pro-max_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:39,053 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:40,148 - DEBUG - Starting new HTTPS connection (8): www.kimovil.com:443
+2023-10-18 03:45:40,249 - DEBUG - Starting new HTTPS connection (9): www.kimovil.com:443
+2023-10-18 03:45:40,505 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s22_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:41,733 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:41,830 - DEBUG - Starting new HTTPS connection (10): www.kimovil.com:443
+2023-10-18 03:45:41,926 - DEBUG - Starting new HTTPS connection (11): www.kimovil.com:443
+2023-10-18 03:45:42,029 - DEBUG - Starting new HTTPS connection (12): www.kimovil.com:443
+2023-10-18 03:45:42,275 - DEBUG - https://www.kimovil.com:443 "GET /_json/zte-axon-40-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:43,314 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:44,415 - DEBUG - Starting new HTTPS connection (13): www.kimovil.com:443
+2023-10-18 03:45:44,644 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-11t-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:45,811 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:46,046 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-13-pro-max_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:47,885 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:50,892 - DEBUG - Starting new HTTPS connection (14): www.kimovil.com:443
+2023-10-18 03:45:51,194 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-k50-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:52,580 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:52,903 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-magic4-pro-ultimate_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:54,421 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:54,708 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-ace_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:56,303 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:56,623 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-6_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:57,822 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:57,921 - DEBUG - Starting new HTTPS connection (15): www.kimovil.com:443
+2023-10-18 03:45:57,999 - DEBUG - Starting new HTTPS connection (16): www.kimovil.com:443
+2023-10-18 03:45:58,245 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-find-x3-neo_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 03:45:59,812 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-18 03:45:59,905 - DEBUG - Starting new HTTPS connection (17): www.kimovil.com:443
+2023-10-18 03:46:00,155 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-11-ultra_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-18 04:33:29,209 - DEBUG - Starting new HTTPS connection (1): www.kimovil.com:443
+2023-10-18 04:33:29,624 - DEBUG - Starting new HTTPS connection (2): www.kimovil.com:443
+2023-10-18 04:33:29,992 - DEBUG - Starting new HTTPS connection (3): www.kimovil.com:443
+2023-10-18 04:33:30,367 - DEBUG - Starting new HTTPS connection (4): www.kimovil.com:443
+2023-10-18 04:33:31,768 - DEBUG - Starting new HTTPS connection (5): www.kimovil.com:443
+2023-10-18 04:33:34,775 - DEBUG - Starting new HTTPS connection (6): www.kimovil.com:443
+2023-10-18 04:33:37,792 - DEBUG - Starting new HTTPS connection (7): www.kimovil.com:443
+2023-10-18 04:33:40,819 - DEBUG - Starting new HTTPS connection (8): www.kimovil.com:443
+2023-10-18 04:33:41,199 - DEBUG - Starting new HTTPS connection (9): www.kimovil.com:443
+2023-10-18 04:33:41,626 - DEBUG - Starting new HTTPS connection (10): www.kimovil.com:443
+2023-10-18 04:33:42,005 - DEBUG - Starting new HTTPS connection (11): www.kimovil.com:443
+2023-10-18 04:33:42,425 - DEBUG - Starting new HTTPS connection (12): www.kimovil.com:443
+2023-10-18 04:33:45,442 - DEBUG - Starting new HTTPS connection (13): www.kimovil.com:443
+2023-10-18 04:33:48,454 - DEBUG - Starting new HTTPS connection (14): www.kimovil.com:443
+2023-10-18 04:33:51,470 - DEBUG - Starting new HTTPS connection (15): www.kimovil.com:443
+2023-10-22 18:32:32,425 - DEBUG - Starting new HTTPS connection (1): www.kimovil.com:443
+2023-10-22 18:32:35,456 - DEBUG - Starting new HTTPS connection (2): www.kimovil.com:443
+2023-10-22 18:32:38,468 - DEBUG - Starting new HTTPS connection (3): www.kimovil.com:443
+2023-10-22 18:32:41,482 - DEBUG - Starting new HTTPS connection (4): www.kimovil.com:443
+2023-10-22 18:32:44,487 - DEBUG - Starting new HTTPS connection (5): www.kimovil.com:443
+2023-10-22 18:32:47,496 - DEBUG - Starting new HTTPS connection (6): www.kimovil.com:443
+2023-10-22 18:32:51,658 - DEBUG - Starting new HTTPS connection (7): www.kimovil.com:443
+2023-10-22 18:32:54,670 - DEBUG - Starting new HTTPS connection (8): www.kimovil.com:443
+2023-10-22 18:32:57,674 - DEBUG - Starting new HTTPS connection (9): www.kimovil.com:443
+2023-10-22 18:33:00,292 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-fe-5g_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-22 18:33:02,464 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-13-limited-edition_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-22 18:33:04,457 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-10r_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:06,930 - DEBUG - https://www.kimovil.com:443 "GET /_json/sony-xperia-5-v_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:09,421 - DEBUG - https://www.kimovil.com:443 "GET /_json/apple-iphone-15-pro-max_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:12,440 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-13-lite_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:14,225 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-edge-40_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:17,183 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s22_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:19,620 - DEBUG - https://www.kimovil.com:443 "GET /_json/poco-f4-5g_prices_deals.json?xhr=1 HTTP/1.1" 404 None
+2023-10-22 18:33:23,366 - DEBUG - https://www.kimovil.com:443 "GET /_json/nubia-z40s-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:25,706 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-edge-30-fusion_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:30,327 - DEBUG - Starting new HTTPS connection (10): www.kimovil.com:443
+2023-10-22 18:33:33,461 - DEBUG - Starting new HTTPS connection (11): www.kimovil.com:443
+2023-10-22 18:33:36,858 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-12x_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:38,951 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-k50-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:41,530 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-magic4-pro-ultimate_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:43,431 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-ace_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:44,930 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-6_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:46,765 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s21-5g_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:48,816 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-11_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:50,793 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-9_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:33:52,520 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-11-ultra_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:33:53,957 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:33:57,736 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-90-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:33:58,981 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:34:01,996 - DEBUG - Starting new HTTPS connection (12): www.kimovil.com:443
+2023-10-22 18:34:05,012 - DEBUG - Starting new HTTPS connection (13): www.kimovil.com:443
+2023-10-22 18:34:08,019 - DEBUG - Starting new HTTPS connection (14): www.kimovil.com:443
+2023-10-22 18:34:13,791 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-10_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:34:17,223 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-plus_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:34:20,261 - DEBUG - https://www.kimovil.com:443 "GET /_json/huawei-mate-50-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:34:24,143 - DEBUG - https://www.kimovil.com:443 "GET /_json/doogee-v30_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:34:29,063 - DEBUG - Starting new HTTPS connection (15): www.kimovil.com:443
+2023-10-22 18:34:35,924 - DEBUG - Starting new HTTPS connection (16): www.kimovil.com:443
+2023-10-22 18:34:37,870 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-13-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:34:39,120 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:34:42,132 - DEBUG - Starting new HTTPS connection (17): www.kimovil.com:443
+2023-10-22 18:34:44,043 - DEBUG - https://www.kimovil.com:443 "GET /_json/google-pixel-7a_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:34:45,888 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:34:48,901 - DEBUG - Starting new HTTPS connection (18): www.kimovil.com:443
+2023-10-22 18:34:51,543 - DEBUG - Starting new HTTPS connection (19): www.kimovil.com:443
+2023-10-22 18:34:54,556 - DEBUG - Starting new HTTPS connection (20): www.kimovil.com:443
+2023-10-22 18:34:57,573 - DEBUG - Starting new HTTPS connection (21): www.kimovil.com:443
+2023-10-22 18:35:00,587 - DEBUG - Starting new HTTPS connection (22): www.kimovil.com:443
+2023-10-22 18:35:03,606 - DEBUG - Starting new HTTPS connection (23): www.kimovil.com:443
+2023-10-22 18:35:08,029 - DEBUG - Starting new HTTPS connection (24): www.kimovil.com:443
+2023-10-22 18:35:11,042 - DEBUG - Starting new HTTPS connection (25): www.kimovil.com:443
+2023-10-22 18:35:16,199 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-11t_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:19,710 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-gt-neo-3t_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:22,745 - DEBUG - https://www.kimovil.com:443 "GET /_json/zte-axon-40-ultra_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:26,970 - DEBUG - Starting new HTTPS connection (26): www.kimovil.com:443
+2023-10-22 18:35:31,056 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-8t_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:35,190 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-11i_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:38,326 - DEBUG - https://www.kimovil.com:443 "GET /_json/zte-axon-30-ultra_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:41,291 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-s17-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:43,758 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno10_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:46,925 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-nord-ce3-5g_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:49,597 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-mi-10t-pro_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:52,379 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-8_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:55,654 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:35:58,586 - DEBUG - https://www.kimovil.com:443 "GET /_json/infinix-zero-ultra_prices_deals.json?xhr=1 HTTP/1.1" 200 None
+2023-10-22 18:36:00,632 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-80-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:02,147 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:04,006 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-10-pro-plus-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:05,303 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:08,116 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-s16-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:09,309 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:11,924 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-find-n3-flip_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:13,692 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:20,516 - DEBUG - Starting new HTTPS connection (27): www.kimovil.com:443
+2023-10-22 18:36:25,454 - DEBUG - Starting new HTTPS connection (28): www.kimovil.com:443
+2023-10-22 18:36:27,159 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12-pro-plus-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:28,621 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:31,128 - DEBUG - https://www.kimovil.com:443 "GET /_json/poco-x5-pro-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:32,792 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:34,574 - DEBUG - https://www.kimovil.com:443 "GET /_json/huawei-p60-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:35,986 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:39,000 - DEBUG - Starting new HTTPS connection (29): www.kimovil.com:443
+2023-10-22 18:36:40,120 - DEBUG - https://www.kimovil.com:443 "GET /_json/doogee-v30t_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:42,140 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:45,487 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-note20_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:47,131 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:50,423 - DEBUG - https://www.kimovil.com:443 "GET /_json/poco-x4-gt_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:36:52,375 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:36:56,559 - DEBUG - Starting new HTTPS connection (30): www.kimovil.com:443
+2023-10-22 18:37:00,439 - DEBUG - https://www.kimovil.com:443 "GET /_json/nothing-phone-1_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:01,766 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:06,236 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-70_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:07,351 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:11,269 - DEBUG - Starting new HTTPS connection (31): www.kimovil.com:443
+2023-10-22 18:37:14,722 - DEBUG - Starting new HTTPS connection (32): www.kimovil.com:443
+2023-10-22 18:37:15,579 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-k50_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:17,136 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:18,363 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-x80_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:19,962 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:20,863 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-edge-30_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:22,448 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:25,372 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-nord-2t_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:27,043 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:27,906 - DEBUG - https://www.kimovil.com:443 "GET /_json/black-shark-5-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:29,556 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:30,411 - DEBUG - https://www.kimovil.com:443 "GET /_json/oneplus-9rt_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:32,298 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:35,121 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-s20-fe-2021_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:36,580 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:37,421 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-gt-neo-2_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:38,562 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:41,038 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-50_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:42,253 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:45,063 - DEBUG - https://www.kimovil.com:443 "GET /_json/asus-rog-phone-5_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:46,511 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:48,546 - DEBUG - https://www.kimovil.com:443 "GET /_json/asus-rog-phone-5s_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:50,062 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:52,841 - DEBUG - https://www.kimovil.com:443 "GET /_json/huawei-mate-40-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:54,134 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:37:56,961 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-gt-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:37:58,889 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:01,923 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno10-pro-china_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:03,210 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:04,059 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-90_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:05,628 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:08,633 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12t-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:09,915 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:10,997 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-k11_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:12,353 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:14,718 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-edge-40-neo_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:16,486 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:17,335 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-note10-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:18,566 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:21,368 - DEBUG - https://www.kimovil.com:443 "GET /_json/sony-xperia-5-iv_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:22,778 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:23,854 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:25,598 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:26,443 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-redmi-note-12-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:28,273 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:30,145 - DEBUG - https://www.kimovil.com:443 "GET /_json/zte-axon-30-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:31,451 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:34,371 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno9-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:36,040 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:39,521 - DEBUG - Starting new HTTPS connection (33): www.kimovil.com:443
+2023-10-22 18:38:43,815 - DEBUG - Starting new HTTPS connection (34): www.kimovil.com:443
+2023-10-22 18:38:47,078 - DEBUG - https://www.kimovil.com:443 "GET /_json/ulefone-power-armor-19_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:48,814 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:51,743 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno8_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:52,977 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:38:56,827 - DEBUG - https://www.kimovil.com:443 "GET /_json/meizu-20-infinity_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:38:58,811 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:02,223 - DEBUG - https://www.kimovil.com:443 "GET /_json/asus-zenfone-8_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:03,640 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:05,013 - DEBUG - https://www.kimovil.com:443 "GET /_json/realme-9-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:06,451 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:07,672 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-12-lite_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:09,468 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:13,741 - DEBUG - https://www.kimovil.com:443 "GET /_json/samsung-galaxy-z-fold4_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:15,520 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:17,470 - DEBUG - https://www.kimovil.com:443 "GET /_json/huawei-mate-50_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:19,333 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:23,654 - DEBUG - Starting new HTTPS connection (35): www.kimovil.com:443
+2023-10-22 18:39:25,330 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-x70-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:27,175 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:30,277 - DEBUG - https://www.kimovil.com:443 "GET /_json/xiaomi-11-lite-5g-ne_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:32,141 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:35,937 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-k10-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:37,897 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:40,329 - DEBUG - https://www.kimovil.com:443 "GET /_json/oppo-reno8-pro-plus_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:42,069 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:43,902 - DEBUG - https://www.kimovil.com:443 "GET /_json/honor-70-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:45,661 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:47,306 - DEBUG - https://www.kimovil.com:443 "GET /_json/motorola-moto-g200-5g_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:48,747 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:51,850 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-iqoo-7_prices_deals.json?xhr=1 HTTP/1.1" 429 None
+2023-10-22 18:39:53,393 - DEBUG - Resetting dropped connection: www.kimovil.com
+2023-10-22 18:39:55,333 - DEBUG - Starting new HTTPS connection (36): www.kimovil.com:443
+2023-10-22 18:39:56,246 - DEBUG - Starting new HTTPS connection (37): www.kimovil.com:443
+2023-10-22 18:40:00,536 - DEBUG - https://www.kimovil.com:443 "GET /_json/vivo-x60-pro_prices_deals.json?xhr=1 HTTP/1.1" 429 None

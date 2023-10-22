@@ -72,4 +72,4 @@ while True:
 
     print (f"finished scraping page {page_number}")
     page_number += 1
-    time.sleep(random.uniform(1, 5))
+    time.sleep(random.uniform(1, 2))
