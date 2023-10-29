@@ -9,33 +9,18 @@ import re
 from tqdm import tqdm
 from requests.exceptions import RequestException
 import logging
+from fake_useragent import UserAgent
+from bs4 import BeautifulSoup
+
+ua = UserAgent()
 
 logging.basicConfig(filename='scraper.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 filename = "C:/Users/owens/Downloads/devices.txt"
 
-url_template = 'https://www.kimovil.com/_json/{}_prices_deals.json'
+url_template = 'https://www.kimovil.com/en/where-to-buy-{}'
 
 querystring = {"xhr": "1"}
-
-user_agents = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; rv:93.0) Gecko/20100101 Firefox/93.0",
-    "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
-    "Mozilla/5.0 (iPad; CPU OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
-    "Mozilla/5.0 (iPod touch; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
-    "Mozilla/5.0 (Linux; Android 11; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; SM-A205U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; SM-N960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; LM-Q720) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; LM-X420) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; LM-X410(FG)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-]
 
 headers = {
     "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -56,15 +41,7 @@ print(f"Loaded {len(device_names)} device names from {filename}")
 price_dict = {}
 print("Price dictionary initialized.")
 
-csv_file = 'C:/Users/owens/Downloads/device_prices.csv'
-
-# Download the proxy list
-""" print("Downloading proxy list...")
-proxy_list_url = "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt"
-response = requests.get(proxy_list_url)
-with open("http.txt", "w") as f:
-    f.write(response.text)
-print("Proxy list downloaded.") """
+csv_file = 'C:/Users/owens/Downloads/device_info.csv'
 
 # Load proxies from the working_proxies.txt file
 with open("C:/Users/owens/Downloads/working_proxies.txt", "r") as f:
@@ -72,7 +49,6 @@ with open("C:/Users/owens/Downloads/working_proxies.txt", "r") as f:
 print("Proxies loaded.")
 
 #remaining_devices = [device_name for device_name in device_names if device_name not in price_dict]
-
 
 # Load existing prices.
 if os.path.exists(csv_file):
@@ -149,8 +125,41 @@ while remaining_devices:
         url = url_template.format(device_id)
         print(f"Processing {device_name}...")
 
-        headers["User-Agent"] = random.choice(user_agents)
+        headers["User-Agent"] = ua.random
         response = get_response_with_retries(url, headers, querystring, proxies, blacklist)
+
+        # Create a Beautiful Soup object and specify the parser.
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Find the device specifications.
+        # Replace the class names with the actual classes you find when you inspect the webpage. 
+        ki_score = soup.find_all("div", class_="miniki")
+        design_materials = soup.find(class_='design-materials-class').get_text()
+        performance_hardware = soup.find(class_='performance-hardware-class').get_text()
+        camera = soup.find(class_='camera-class').get_text()
+        connectivity = soup.find(class_='connectivity-class').get_text()
+        battery = soup.find(class_='battery-class').get_text()
+        screen_type = soup.find(class_='screen-type-class').get_text()
+        processor = soup.find(class_='processor-class').get_text()
+        battery_size = soup.find(class_='battery-size-class').get_text()
+        antutu_score = soup.find(class_='antutu-score-class').get_text()
+        canada_network_bands = soup.find(class_='canada-network-bands-class').get_text()
+        peak_brightness = soup.find(class_='peak-brightness-class').get_text()
+        ram = soup.find(class_='ram-class').get_text()
+        storage_amount = soup.find(class_='storage-amount-class').get_text()
+        fingerprint_sensor = soup.find(class_='fingerprint-sensor-class').get_text()
+        sd_card_slot = soup.find(class_='sd-card-slot-class').get_text()
+        headphone_jack = soup.find(class_='headphone-jack-class').get_text()
+        nfc = soup.find(class_='nfc-class').get_text()
+        volte = soup.find(class_='volte-class').get_text()
+        fast_charge_speed = soup.find(class_='fast-charge-speed-class').get_text()
+        google_services = soup.find(class_='google-services-class').get_text()
+
+        # Save the data.
+        price_dict[device_name] = [device_name, ki_score, design_materials, performance_hardware, camera, connectivity, battery, 
+                                screen_type, processor, battery_size, antutu_score, canada_network_bands, peak_brightness, ram, 
+                                storage_amount, fingerprint_sensor, sd_card_slot, headphone_jack, nfc, volte, fast_charge_speed, 
+                                google_services]
 
         if response is None:
             print(f"Skipping {device_name} due to no working proxies")
@@ -169,7 +178,7 @@ while remaining_devices:
                 if device_name not in price_dict or price_dict[device_name][0] is None or min_usd_price < price_dict[device_name][0]:
                     price_dict[device_name] = [min_usd_price, min_usd_price, '']
             else:
-                print(f"No prices found for {device_name}")                
+                print(f"No prices found for {device_name}")               
                 price_dict[device_name] = [None, None, 'No prices found']
         
         else:
@@ -181,10 +190,12 @@ while remaining_devices:
 
     with open(csv_file, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['Device Name', 'Current Price (USD)', 'Lowest Price Seen (USD)', 'Error Messages'])
+        writer.writerow(['Device Name', 'Ki cost effective score', 'Design & Materials', 'Performance & Hardware', 'Camera', 
+                        'Connectivity', 'Battery', 'Screen type', 'Processor', 'Battery size', 'AnTuTu score', 
+                        'Canada network bands', 'Peak brightness', 'RAM', 'Storage amount', 'Fingerprint sensor', 
+                        'SD card slot', 'Headphone jack', 'NFC', 'VoLTE', 'Fast charge speed', 'Google Services (official)','Error Messages'])
         for device, data in price_dict.items():
-            prices, error_message = data[:-1], data[-1]
-            writer.writerow([device] + [str(price) if price is not None else '' for price in prices] + [error_message])
+            writer.writerow([device] + data)
 
     print(f'Data for {device_name} has been saved to {csv_file}')
     progress_bar.update(1)

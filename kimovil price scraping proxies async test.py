@@ -1,16 +1,16 @@
 import time
-import cloudscraper
+import requests
+import re
 import json
 import csv
 import os
 import random
-import requests
-import re
 from tqdm import tqdm
-from requests.exceptions import RequestException
-import logging
+import httpx
+import asyncio
+import cloudscraper
 
-logging.basicConfig(filename='scraper.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+#sleep = 10
 
 filename = "C:/Users/owens/Downloads/devices.txt"
 
@@ -41,12 +41,12 @@ headers = {
     "Accept": "application/json, text/javascript, */*; q=0.01",
     "Accept-Language": "en-US,en;q=0.9",
     "Referer": "https://www.kimovil.com/en/compare-smartphones",
-    "Sec-Ch-Ua": "^\^Chromium^^;v=^\^116^^, ^\^Not"
-    #"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+    "Sec-Ch-Ua": "^\^Chromium^^;v=^\^116^^, ^\^Not",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
     #"X-Forwarded-For": "38.0.101.76"
 }
 
-scraper = cloudscraper.create_scraper()
+scraper = httpx.AsyncClient()
 print("Scraper created.")
 
 with open(filename, 'r') as f:
@@ -98,67 +98,64 @@ if os.path.exists(csv_file):
             lowest_price = None if lowest_price == '' else float(lowest_price)
             price_dict[device] = [cur_price, lowest_price, error_message]
 
-
-def get_response_with_retries(url, headers, params, proxies, blacklist):
-    for proxy in proxies:
-        proxy_dict = {"http": f"http://{proxy}", "https": f"http://{proxy}"}
+async def get_response_with_retries(url, headers, params):
+    for _ in range(3):  # Try 3 times
         try:
-            response = scraper.get(url, headers=headers, params=params, proxies=proxy_dict, timeout=3)
-            if response.status_code != 429:
-                return response
+            response = await scraper.get(url, headers=headers, params=params)
+            response.raise_for_status()
+            return response
+        except httpx.HTTPStatusError as e:
+            if e.response.status_code == 429:
+                print("Received '429 Too Many Requests'. Switching to a different proxy...")
+                """ x_forwarded_for = headers.get('X-Forwarded-For')
+                if x_forwarded_for is not None:
+                    print(x_forwarded_for) """
+                headers['X-Forwarded-For'] = await get_next_proxy()  # Assuming get_next_proxy() returns the next proxy
+                continue
             else:
-                print(f"Rate limit reached with proxy {proxy}")
-                raise requests.exceptions.HTTPError
-        except (requests.exceptions.RequestException, requests.exceptions.HTTPError) as e:
-            print(f"Error using proxy {proxy}: {e}")
-            blacklist.add(proxy)
-            proxies.remove(proxy)
-            if len(proxies) == 0 and len(blacklist) > 0:
-                print("All proxies are blacklisted. Emptying blacklist and retrying...")
-                proxies.extend(list(blacklist))
-                blacklist.clear()
+                #print(f"HTTP error: {e.response.status_code}")
+                """ x_forwarded_for = headers.get('X-Forwarded-For')
+                if x_forwarded_for is not None:
+                    print(x_forwarded_for) """
+                headers['X-Forwarded-For'] = await get_next_proxy()  # Assuming get_next_proxy() returns the next proxy
+                continue
+        except Exception as e:
+            print(f"Error: {e}")
+        await asyncio.sleep(2)  # Wait for 2 seconds before retrying
+
+    print(f"Failed to retrieve data for {url} after 3 attempts")
     return None
+
+async def get_next_proxy():
+    return random.choice(proxies)
 
 blacklist = set()
 remaining_devices = device_names.copy()
 progress_bar = tqdm(total=len(remaining_devices), desc="Processing devices", ncols=100)
-current_proxy = random.choice(proxies)
 
-while remaining_devices:
-    device_name = remaining_devices.pop(0)
+async def main():    
+    while remaining_devices:
+        device_name = remaining_devices.pop(0)
 
-    # If you want to update all the prices, comment out the following lines.
-    if device_name in price_dict:
-        error_message = price_dict[device_name][-1]
-        current_price = price_dict[device_name][0]
-        if error_message not in ['', 'Error getting the JSON'] or current_price is not None:
-            progress_bar.update(1)
-            continue
-    
-    if proxies:
-        # Replace '+' with 'plus' considering the space before it.
+        if device_name in price_dict:
+            error_message = price_dict[device_name][-1]
+            current_price = price_dict[device_name][0]
+            if error_message not in ['', 'Error getting the JSON'] or current_price is not None:
+                progress_bar.update(1)
+                continue
+
         url_device_name = re.sub(r'( ?)\+', lambda match: ' Plus' if match.group(1) == '' else 'plus', device_name)
-        
-        # Remove parentheses and other invalid URL characters.
         url_device_name = re.sub(r'[^\w\s\+-]', '', url_device_name)
-        
-        # Replace spaces with hyphens and convert to lowercase for the URL.
         device_id = re.sub("\s", "-", url_device_name.lower())
-        print()
-        print(url_device_name)
         url = url_template.format(device_id)
-        print(f"Processing {device_name}...")
 
         headers["User-Agent"] = random.choice(user_agents)
-        response = get_response_with_retries(url, headers, querystring, proxies, blacklist)
+        response = await get_response_with_retries(url, headers, querystring)  # Use await here
 
         if response is None:
-            print(f"Skipping {device_name} due to no working proxies")
-            remaining_devices.append(device_name)  # Add the device back to the list to try again later
-            progress_bar.update(1)  # Update the progress bar when skipping a device
+            print(f"Skipping {device_name} due to no response")
+            progress_bar.update(1)
             continue
-        print(response.text.strip())
-        print(response.status_code)
 
         if response.status_code == 200 and response.text and response.text.strip() != "":
             data = json.loads(response.text)
@@ -171,7 +168,7 @@ while remaining_devices:
             else:
                 print(f"No prices found for {device_name}")                
                 price_dict[device_name] = [None, None, 'No prices found']
-        
+
         else:
             print(f'Error getting the JSON for {device_name}')
             if device_name not in price_dict:
@@ -179,13 +176,15 @@ while remaining_devices:
             else:
                 price_dict[device_name] = [price_dict[device_name][0], price_dict[device_name][1], 'Error getting the JSON']
 
-    with open(csv_file, 'w', newline='', encoding='utf-8') as file:
-        writer = csv.writer(file)
-        writer.writerow(['Device Name', 'Current Price (USD)', 'Lowest Price Seen (USD)', 'Error Messages'])
-        for device, data in price_dict.items():
-            prices, error_message = data[:-1], data[-1]
-            writer.writerow([device] + [str(price) if price is not None else '' for price in prices] + [error_message])
+        with open(csv_file, 'w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Device Name', 'Current Price (USD)', 'Lowest Price Seen (USD)', 'Error Messages'])
+            for device, data in price_dict.items():
+                prices, error_message = data[:-1], data[-1]
+                writer.writerow([device] + [str(price) if price is not None else '' for price in prices] + [error_message])
 
-    print(f'Data for {device_name} has been saved to {csv_file}')
-    progress_bar.update(1)
-    time.sleep(random.uniform(2, 3))
+        print(f'Data for {device_name} has been saved to {csv_file}')
+        progress_bar.update(1)
+        time.sleep(random.uniform(1, 2))
+
+asyncio.run(main())

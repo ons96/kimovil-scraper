@@ -1,3 +1,4 @@
+#keeps saying "skipping device due to no working proxies" even though there are more proxies to try
 import time
 import cloudscraper
 import json
@@ -99,25 +100,28 @@ if os.path.exists(csv_file):
             price_dict[device] = [cur_price, lowest_price, error_message]
 
 
-def get_response_with_retries(url, headers, params, proxies, blacklist):
-    for proxy in proxies:
-        proxy_dict = {"http": f"http://{proxy}", "https": f"http://{proxy}"}
-        try:
-            response = scraper.get(url, headers=headers, params=params, proxies=proxy_dict, timeout=3)
-            if response.status_code != 429:
-                return response
-            else:
-                print(f"Rate limit reached with proxy {proxy}")
-                raise requests.exceptions.HTTPError
-        except (requests.exceptions.RequestException, requests.exceptions.HTTPError) as e:
-            print(f"Error using proxy {proxy}: {e}")
+def get_response_with_retries(url, headers, params, proxy, proxies, blacklist):
+    proxy_dict = {"http": f"http://{proxy}", "https": f"http://{proxy}"}
+
+    try:
+        response = scraper.get(url, headers=headers, params=params, proxies=proxy_dict, timeout=3)
+        return response
+    except requests.exceptions.RequestException as e:
+        if isinstance(e, requests.exceptions.HTTPError) and e.response.status_code in [400, 401, 403, 404]:
+            print(f"Received status code {e.response.status_code}. Switching proxy...")
             blacklist.add(proxy)
             proxies.remove(proxy)
+
+            # Empty the blacklist if all proxies are blacklisted and add them back to the proxies list
             if len(proxies) == 0 and len(blacklist) > 0:
                 print("All proxies are blacklisted. Emptying blacklist and retrying...")
                 proxies.extend(list(blacklist))
                 blacklist.clear()
-    return None
+
+            return None
+        else:
+            print(f"Error using proxy {proxy}: {e}")
+            return None
 
 blacklist = set()
 remaining_devices = device_names.copy()
@@ -150,11 +154,10 @@ while remaining_devices:
         print(f"Processing {device_name}...")
 
         headers["User-Agent"] = random.choice(user_agents)
-        response = get_response_with_retries(url, headers, querystring, proxies, blacklist)
+        response = get_response_with_retries(url, headers, querystring, current_proxy, proxies, blacklist)
 
         if response is None:
             print(f"Skipping {device_name} due to no working proxies")
-            remaining_devices.append(device_name)  # Add the device back to the list to try again later
             progress_bar.update(1)  # Update the progress bar when skipping a device
             continue
         print(response.text.strip())
@@ -188,4 +191,4 @@ while remaining_devices:
 
     print(f'Data for {device_name} has been saved to {csv_file}')
     progress_bar.update(1)
-    time.sleep(random.uniform(2, 3))
+    time.sleep(random.uniform(1, 2))

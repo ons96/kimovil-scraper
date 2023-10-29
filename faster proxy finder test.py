@@ -1,3 +1,4 @@
+#I think this works fine? But test to make sure
 import aiohttp
 import asyncio
 from tqdm import tqdm
