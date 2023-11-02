@@ -1,3 +1,4 @@
+#use the other working one, that one has the correct random delay between scrapes, so I think it's better
 import time
 import cloudscraper
 import json

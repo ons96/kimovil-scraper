@@ -9,33 +9,17 @@ import re
 from tqdm import tqdm
 from requests.exceptions import RequestException
 import logging
+from fake_useragent import UserAgent
+
+ua = UserAgent()
 
 logging.basicConfig(filename='scraper.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-filename = "C:/Users/owens/Downloads/devices.txt"
+filename = "C:/Users/owens/Downloads/deviceURLstrings.txt"
 
 url_template = 'https://www.kimovil.com/_json/{}_prices_deals.json'
 
 querystring = {"xhr": "1"}
-
-user_agents = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; rv:93.0) Gecko/20100101 Firefox/93.0",
-    "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
-    "Mozilla/5.0 (iPad; CPU OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
-    "Mozilla/5.0 (iPod touch; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
-    "Mozilla/5.0 (Linux; Android 11; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; SM-A205U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; SM-N960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; LM-Q720) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; LM-X420) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 11; LM-X410(FG)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
-]
 
 headers = {
     "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -149,7 +133,7 @@ while remaining_devices:
         url = url_template.format(device_id)
         print(f"Processing {device_name}...")
 
-        headers["User-Agent"] = random.choice(user_agents)
+        headers["User-Agent"] = ua.random
         response = get_response_with_retries(url, headers, querystring, proxies, blacklist)
 
         if response is None:
@@ -169,9 +153,9 @@ while remaining_devices:
                 if device_name not in price_dict or price_dict[device_name][0] is None or min_usd_price < price_dict[device_name][0]:
                     price_dict[device_name] = [min_usd_price, min_usd_price, '']
             else:
-                print(f"No prices found for {device_name}")                
+                print(f"No prices found for {device_name}")               
                 price_dict[device_name] = [None, None, 'No prices found']
-        
+
         else:
             print(f'Error getting the JSON for {device_name}')
             if device_name not in price_dict:

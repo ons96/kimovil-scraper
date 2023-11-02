@@ -1,66 +1,72 @@
-#I think this works fine? But test to make sure
-import aiohttp
 import asyncio
-from tqdm import tqdm
+import aiohttp
+import aiofiles
 import os
+from tqdm import tqdm
+from aiohttp_socks import ProxyConnector, ProxyType
+from aiohttp import TCPConnector
+from aiohttp.helpers import Proxy
 
-# Download the proxy list
-async def download_proxy_list():
-    proxy_list_url = "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt"
+class ProxyConnector(TCPConnector):
+    def __init__(self, proxy, **kwargs):
+        super().__init__(**kwargs)
+        self._proxy = Proxy(proxy)
+
+    async def _create_proxy_connection(self, req, traces, timeout):
+        _, proto = await super()._create_connection(req, traces, timeout)
+        return self._proxy, proto
+
+async def initialize_file(file_path):
+    if os.path.exists(file_path):
+        async with aiofiles.open(file_path, 'a+') as f:
+            await f.truncate(0)
+
+async def download_proxy_list(url, file_path):
     async with aiohttp.ClientSession() as session:
-        async with session.get(proxy_list_url) as response:
-            text = await response.text()
-            with open("http.txt", "w") as f:
-                f.write(text)
-            return [line.strip() for line in text.splitlines()]
+        async with session.get(url) as resp:
+            if resp.status == 200:
+                async with aiofiles.open(file_path, 'w') as f:
+                    await f.write(await resp.text())
 
-async def extract(proxy):
+async def check_proxy(session, proxy):
+    connector = ProxyConnector.from_url(proxy, proxy_type=ProxyType.HTTP)
     try:
-        # Add the "http://" prefix
-        proxy_url = "http://" + proxy
-
-        async with aiohttp.ClientSession() as session:
-            async with session.get('https://httpbin.org/ip', proxy=proxy_url, timeout=2) as response:
-                json = await response.json()
-                print(f"{proxy} is working: {json}")
+        async with session.get('https://httpbin.org/ip', connector=connector, timeout=2) as response:
+            if response.status == 200:
+                print(await response.text(), 'working')
                 return (proxy, True)
     except Exception as e:
-        print(f"Error checking {proxy}: {e}")
         return (proxy, False)
 
-def initialize_file(file_path):
-    if not os.path.exists(file_path):
-        with open(file_path, "w") as f:
-            pass
-    else:
-        open(file_path, 'w').close()  # This will clear the contents of the file
-
-# Test proxies and store working and non-working proxies in separate files
 async def main():
-    file_directory = 'C:/Users/owens/Downloads/'
+    proxy_list_url = "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt"
+    file_path = "http.txt"
+
+    await download_proxy_list(proxy_list_url, file_path)
+    print("Proxy list downloaded.")
+
+    async with aiofiles.open(file_path, 'r') as f:
+        proxies = [line.strip() for line in await f.readlines()]
+    print("Proxies loaded.")
+
+    file_directory = 'C:/Users/owens/Downloads/'    
     working_proxies_file = os.path.join(file_directory, 'working_proxies.txt')
-    non_working_proxies_file = os.path.join(file_directory, 'non_working_proxies.txt')
+    
+    await initialize_file(working_proxies_file)
 
-    initialize_file(working_proxies_file)
-    initialize_file(non_working_proxies_file)
-
-    # Download and load proxies
-    proxies = await download_proxy_list()
-
-    results = []
     async with aiohttp.ClientSession() as session:
-        for proxy in tqdm(proxies):
-            result = await extract(proxy)
+        tasks = []
+        for proxy in proxies:
+            tasks.append(check_proxy(session, proxy))
+        results = []
+        for future in tqdm(asyncio.as_completed(tasks), total=len(tasks)):
+            result = await future
             results.append(result)
 
-    # Write proxies to respective files
-    with open(working_proxies_file, "a") as wp, open(non_working_proxies_file, "a") as nwp:
+    async with aiofiles.open(working_proxies_file, 'a') as f:
         for proxy, is_working in results:
             if is_working:
-                wp.write(proxy + "\n")
-            else:
-                nwp.write(proxy + "\n")
+                await f.write(proxy + "\n")
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    asyncio.run(main())

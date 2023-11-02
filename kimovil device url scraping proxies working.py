@@ -67,7 +67,7 @@ def get_response_with_retries(url, headers, params, proxy, blacklist, max_retry_
 
 current_proxy = None
 filename = "C:/Users/owens/Downloads/deviceURLstrings.txt"
-page_number = 26
+page_number = 1
 blacklist = set()
 
 while True:
