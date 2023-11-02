@@ -116,11 +116,7 @@ with tqdm(total=total_pages) as pbar:
                 if device_name in df['device_name'].values:
                     idx = df[df['device_name'] == device_name].index[0]
                     
-                    if skip_existing and pd.notna(df.loc[idx, 'device_price']):
-                        print(f"Skipping {device_name} due to existing price.")
-                        continue
-                    
-                    if device_price is not None:
+                    if device_price is not None and device_price != 0:
                         device_price = float(device_price)
                         df.loc[idx, 'device_price'] = device_price
                         if pd.isna(df.loc[idx, 'lowest_price']) or device_price < float(df.loc[idx, 'lowest_price']):
